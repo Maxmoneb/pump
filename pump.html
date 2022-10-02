@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>puthussery kattalan fuels</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+  </head>
+  <style media="screen">
+    #htmlContent{
+      background: palegreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      height: auto;
+    }
+  </style>
+  <body onload = "autoClick();">
+
+    <div id = "htmlContent">
+      <h4>
+        
+<table class="table-resp">
+  <caption><b><h1> puthussery kattalan fuels</h1></caption>
+<thead>
+    <tr>
+      <td>DATE</td>
+      <td><input> </input></td>
+    </tr>
+  
+    <tr>
+      <th>NAME</th>
+      <th>SHORT</th>
+    </tr>
+  </thead>
+  <tbody>
+        
+    <hr>
+    <tr>
+      <td>binoy</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>ramani</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>sini</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>sunny</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>ashokan</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>rijo</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>alkesh</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>godwin</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>blessom</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>zonal</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><input> </input></td>
+    </tr>
+    <tr>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+
+      </h6>
+    </div>
+    <H1>
+    <a id="download">Download</a>
+</H1>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+  </body>
+</html>
+
